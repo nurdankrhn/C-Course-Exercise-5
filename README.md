@@ -48,12 +48,16 @@ char *strstr(char *s1, char *s2);
 
 /*****exercise5.5*****/
 
-:pushpin:) Standart olmayan ancak bazı derleyicilerde bulunan aşağıdaki fonksiyonları yazıp test ediniz:
+:pushpin:Standart olmayan ancak bazı derleyicilerde bulunan aşağıdaki fonksiyonları yazıp test ediniz:
 
 char *strupr(char *str);
+
 char *strlwr(char *str);
+
 char *strrev(char *str);
+
 int stricmp(char *str1, char *str2);
+
 char *strset(char *str, int ch);
 
 strupr yazının tüm karakterlerini büyük harfe, strlwr ise küçük harfe dönüşştürür. Burada toupper ve tolower fonksiyonlarını kullanabilirsiniz. strrev bir yazıyı ters yüz etmektedir. stricmp yazıyı büyük harf küçük harf duyarlılığı olmadna karşılaştırır. strset bir yazıyı belli bir karakterle doldurur. char * geri dönüş değerine sahip olan fonksiyonlar birinci parametresiyle belirtilen adresin aynısına geri dönmektedir.
