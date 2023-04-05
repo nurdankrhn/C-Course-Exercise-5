@@ -1,0 +1,42 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <math.h>
+
+char* mystrstr(char* s1, char* s2);
+
+
+int main(void)
+{
+	char array1[10] = "adana";
+	char array2[10] = "dana";
+	char* ret;
+	ret = mystrstr(array1, array2);
+	printf("The substring is \"%s\"", ret);
+
+
+	return 0;
+}
+
+char* mystrstr(char* s1, char* s2)  //adana dana
+{
+	int i = 0;
+	for (; s1[i] != NULL; i++)
+	{
+		
+		if (s1[i] == s2[0])
+		{
+			int j = 0;
+			for (; s1[i] != NULL && s2[j] != NULL; i++, j++)
+				if (s1[i] != s2[j])
+					break;
+
+
+			if ( j == strlen(s2))
+				return s2;
+		}
+	}
+	return NULL;
+}
+
